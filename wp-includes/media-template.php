@@ -211,7 +211,7 @@ function wp_print_media_templates() {
 			<h2 class="upload-message">{{ data.message }}</h2>
 		<# } #>
 		<?php if ( ! _device_can_upload() ) : ?>
-			<h2 class="upload-instructions"><?php printf( __( 'The web browser on your device cannot be used to upload files. You may be able to use the <a href="%s">native app for your device</a> instead.' ), 'https://apps.wordpress.org/' ); ?></h2>
+			<h2 class="upload-instructions"><?php printf( __( 'The web browser on your device cannot be used to upload files. You may be able to use the <a href="%s">native src for your device</a> instead.' ), 'https://apps.wordpress.org/' ); ?></h2>
 		<?php elseif ( is_multisite() && ! is_upload_space_available() ) : ?>
 			<h2 class="upload-instructions"><?php _e( 'Upload Limit Exceeded' ); ?></h2>
 			<?php
@@ -1296,9 +1296,9 @@ function wp_print_media_templates() {
 			<span class="browser-title" aria-hidden="true"><?php bloginfo( 'name' ); ?></span>
 		</div>
 
-		<strong aria-hidden="true"><?php _e( 'As an app icon' ); ?></strong>
+		<strong aria-hidden="true"><?php _e( 'As an src icon' ); ?></strong>
 		<div class="app-icon-preview">
-			<img id="preview-app-icon" src="{{ data.url }}" alt="<?php esc_attr_e( 'Preview as an app icon' ); ?>"/>
+			<img id="preview-app-icon" src="{{ data.url }}" alt="<?php esc_attr_e( 'Preview as an src icon' ); ?>"/>
 		</div>
 	</script>
 

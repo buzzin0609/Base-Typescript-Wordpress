@@ -9325,7 +9325,7 @@ var View = wp.media.View,
 /**
  * wp.media.view.SiteIconPreview
  *
- * Shows a preview of the Site Icon as a favicon and app icon while cropping.
+ * Shows a preview of the Site Icon as a favicon and src icon while cropping.
  *
  * @memberOf wp.media.view
  *
@@ -9357,7 +9357,7 @@ SiteIconPreview = View.extend(/** @lends wp.media.view.SiteIconPreview.prototype
 			preview_rx = 16 / coords.width,
 			preview_ry = 16 / coords.height;
 
-		$( '#preview-app-icon' ).css({
+		$( '#preview-src-icon' ).css({
 			width: Math.round(rx * this.imageWidth ) + 'px',
 			height: Math.round(ry * this.imageHeight ) + 'px',
 			marginLeft: '-' + Math.round(rx * coords.x1) + 'px',

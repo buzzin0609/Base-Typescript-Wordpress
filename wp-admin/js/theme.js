@@ -19,7 +19,7 @@ l10n = themes.data.l10n;
 // Shortcut for isInstall check
 themes.isInstall = !! themes.data.settings.isInstall;
 
-// Setup app structure
+// Setup src structure
 _.extend( themes, { model: {}, view: {}, routes: {}, router: {}, template: wp.template });
 
 themes.Model = Backbone.Model.extend({

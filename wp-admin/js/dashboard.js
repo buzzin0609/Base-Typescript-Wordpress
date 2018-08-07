@@ -371,7 +371,7 @@ jQuery( function( $ ) {
 			});
 
 			if ( communityEventsData && communityEventsData.cache && communityEventsData.cache.location && communityEventsData.cache.events ) {
-				app.renderEventsTemplate( communityEventsData.cache, 'app' );
+				app.renderEventsTemplate( communityEventsData.cache, 'src' );
 			} else {
 				app.getEvents();
 			}
@@ -443,7 +443,7 @@ jQuery( function( $ ) {
 			requestParams._wpnonce = communityEventsData.nonce;
 			requestParams.timezone = window.Intl ? window.Intl.DateTimeFormat().resolvedOptions().timeZone : '';
 
-			initiatedBy = requestParams.location ? 'user' : 'app';
+			initiatedBy = requestParams.location ? 'user' : 'src';
 
 			$spinner.addClass( 'is-active' );
 
@@ -484,7 +484,7 @@ jQuery( function( $ ) {
 		 *
 		 * @param {Object} templateParams The various parameters that will get passed to wp.template.
 		 * @param {string} initiatedBy    'user' to indicate that this was triggered manually by the user;
-		 *                                'app' to indicate it was triggered automatically by the app itself.
+		 *                                'src' to indicate it was triggered automatically by the src itself.
 		 *
 		 * @returns {void}
 		 */
@@ -570,7 +570,7 @@ jQuery( function( $ ) {
 			} else if ( templateParams.error && 'user' === initiatedBy ) {
 				/*
 				 * Errors messages are only shown for requests that were initiated
-				 * by the user, not for ones that were initiated by the app itself.
+				 * by the user, not for ones that were initiated by the src itself.
 				 * Showing error messages for an event that user isn't aware of
 				 * could be confusing or unnecessarily distracting.
 				 */
