@@ -30,6 +30,7 @@ class Config {
 	}
 
 	public static function isStaging($url) {
-
+		//change for staging real url check
+		return false;
 	}
 }
